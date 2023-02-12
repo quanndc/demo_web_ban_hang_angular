@@ -1,0 +1,23 @@
+<div id="container">
+    <div class="menu">
+        <div class="wraper-items">
+            <div class="item" *ngFor="let item of shoes">
+                <img src={{item.photoUrl}}>
+                <div class="name">
+                    <p>{{item.name}}</p>
+                </div>
+                <div class="description">
+                    <p>{{item.description}}</p>
+                </div>
+                <div class="price-stock">
+                    <p class="price">Giá: <span>{{item.price}}</span></p>
+                    <p class="in-stock">Số lượng: <span>{{item.inStock}}</span></p>
+                </div>
+                <div class="add-buy">
+                    <div class="add">Thêm giỏ</div>
+                    <div class="buy">Mua ngay</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

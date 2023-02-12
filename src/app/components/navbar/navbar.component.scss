@@ -1,0 +1,129 @@
+#container{
+    width: 100%;
+    height: 10%;
+    border-bottom: 1px solid rgb(230, 230, 230);
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    box-shadow: rgba(42, 42, 42, 0.2) 0px 5px 20px 0px;
+    z-index: 1;
+}
+
+
+.top-navbar{
+    width: 100%;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.top-navbar div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#00000099;
+    font-size: small;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.top-navbar div:hover{
+    color: #EA8025;
+    transition: 0.5s;
+}
+
+.left-top-navbar{
+    width: 15%;
+    height: 2.5rem;
+}
+
+.middle-top-navbar{
+    width: 15%;
+    height: 2.5rem;
+}
+
+.right-top-navbar{
+    width: 15%;
+    height: 2.5rem;
+}
+
+.bottom-navbar{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+}
+
+.bottom-navbar-container{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+}
+
+
+.logo{
+    width: 15%;
+    height: auto;
+}
+
+.logo img{
+    width: 9rem;
+    height: auto;
+    cursor: pointer;
+}
+
+
+.menu{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.menu span{
+    margin: 0;
+    font-size: 1rem;
+}
+
+.menu a{
+    padding: 0 1.35rem;
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    // transition: 0.4s;
+}
+
+// .menu a:hover{
+//     // color: #EA8025;
+//     transition: 0.4s;
+//     img{
+//         color: #EA8025;
+//     }
+// }
+
+.menu div{
+    width: fit-content;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius:8px;
+    border-top-right-radius:8px;
+    margin: 0 0.2rem;
+    transition: 0.4s;
+}
+
+.menu div:hover{
+    background-color: #e7861e;
+    transition: 0.4s;
+    color: #fff;
+}
+
+.activePage{
+    background-color: #e7861e;
+    color: white;
+}
