@@ -1,0 +1,40 @@
+<div id="cart-container">
+    <div class="item-wraper">
+        <div *ngFor="let item of this.cartService.cart" class="item">
+            <div class="photo">
+                <img src={{item.photoUrl}}>
+            </div>
+            <div class="content">
+                <div class="remove">
+                    <button (click)="this.cartService.remove(item)">X</button>
+                </div>
+                <p class="name">{{item.name}}</p>
+                <p class="discription">{{item.description}}</p>
+                <p class="price">Giá: <span>{{item.price | number}} VNĐ</span></p>
+                <div class="quantity-total">
+                    <button (click)="this.cartService.decre(item)">giảm</button>
+                    <p class="quantity">Số lượng: <span>{{item.quantity}}</span></p>
+                    <div *ngIf="item.inStock <= 0">
+                        <button disabled="true" (click)="this.cartService.incre(item)">tăng</button>
+                    </div>
+                    <div *ngIf="item.inStock > 0">
+                        <button (click)="this.cartService.incre(item)">tăng</button>
+                    </div>
+                    
+                    <p class="total">Tổng: <span>{{item.price*item.quantity | number}} VNĐ</span></p>
+                </div>
+                <div>
+                    
+                </div>
+            </div>
+        </div>
+        <div (click)="navigateToBill(); this.cartService.purchase()"  class="purchase" *ngIf="this.cartService.cart.length !== 0">
+            <button>Thanh toán</button>
+        </div>
+        <div *ngIf="this.cartService.cart.length === 0">
+            <h1>
+                Không có sản phẩm nào trong giỏ hàng
+            </h1>
+        </div>
+    </div>
+</div>

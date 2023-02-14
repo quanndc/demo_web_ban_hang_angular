@@ -1,0 +1,33 @@
+<div id="cart-container">
+    <div class="item-wraper">
+        <div *ngFor="let item of this.cartService.cart" class="item">
+            <div class="photo">
+                <img src={{item.photoUrl}}>
+            </div>
+            <div class="content">
+                <div class="remove">
+                    <button (click)="this.cartService.remove(item)">X</button>
+                </div>
+                <p class="name">{{item.name}}</p>
+                <p class="discription">{{item.description}}</p>
+                <p class="price">Giá: <span>{{item.price | number}} VNĐ</span></p>
+                <div class="quantity-total">
+                    <p class="quantity">Số lượng: <span>{{item.quantity}}</span></p>
+                    <p class="total">Tổng: <span>{{item.price*item.quantity | number}} VNĐ</span></p>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="total">
+            <h1>
+                Tổng tiền: <span> {{this.cartService.total}}</span>
+            </h1>
+        </div>
+        <div class="purchase">
+            <button (click)="confirm(); navigateToHome()">Xác nhận</button>
+        </div>
+    </div>
+    
+</div>
+

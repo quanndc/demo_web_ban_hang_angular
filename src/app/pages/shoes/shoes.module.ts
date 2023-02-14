@@ -7,11 +7,11 @@ import { ShoesComponent } from './shoes.component';
 
 @NgModule({
   declarations: [
-    ShoesComponent
+    ShoesComponent,
   ],
   imports: [
     CommonModule,
-    ShoesRoutingModule
+    ShoesRoutingModule,
   ]
 })
 export class ShoesModule { }

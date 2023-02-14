@@ -24,8 +24,11 @@
             </div>
             <div class="menu">
                 <div *ngFor="let content of pages; let i = index">
-                    <div [class.activePage] = "selectedIndex === i"(click)="onFocus(i)">
-                        <a (click)="navigateTo(i)">{{content}}</a>
+                    <div *ngIf="content !== 'Giỏ hàng'" (click)="navigateTo(i)" [class.activePage] = "selectedIndex === i"(click)="onFocus(i)">
+                        <a  >{{content}}</a>
+                    </div>
+                    <div *ngIf="content === 'Giỏ hàng'" (click)="navigateTo(i)" [class.activePage] = "selectedIndex === i"(click)="onFocus(i)">
+                        <a>{{content}} <span>{{this.cartService.cart.length}}</span></a>
                     </div>
                 </div>
             </div>
