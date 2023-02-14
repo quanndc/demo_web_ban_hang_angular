@@ -15,7 +15,7 @@ export class BillComponent implements OnInit {
     alert("Mua hàng thành công\n" +
     "Cảm ơn bạn đã mua hàng của chúng tôi\n" +
     "Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất\n" +
-    "Tổng tiền hóa đơn của bạn là: " + this.cartService.total)
+    "Tổng tiền hóa đơn của bạn là: " + (new Intl.NumberFormat('VN-IN', { maximumSignificantDigits: 2 }).format(this.cartService.total)) + " VNĐ");
   }
 
   navigateToHome(){

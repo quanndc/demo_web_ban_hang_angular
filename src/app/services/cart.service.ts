@@ -9,16 +9,16 @@ export class CartService {
 
   total = 0;
   cart:Item[] = [
-    {
-      id:1,
-      name: 'Nike Air Max Zm950 CV6897',
-      type: "shoes",
-      price: 5280000,
-      description: 'Giày Nike sở hữu công nghệ Air Max độc quyền có phần đệm khí giúp êm chân, phù hợp với những môn thể thao cần hoạt động nhiều',
-      photoUrl: 'https://cdn.tgdd.vn/Products/Images/9980/260516/nike-air-max-zm950-cv6897-nam-thumb-1-2-600x600.jpg',
-      inStock: 100,
-      quantity: 1,
-    },
+    // {
+    //   id:1,
+    //   name: 'Nike Air Max Zm950 CV6897',
+    //   type: "shoes",
+    //   price: 5280000,
+    //   description: 'Giày Nike sở hữu công nghệ Air Max độc quyền có phần đệm khí giúp êm chân, phù hợp với những môn thể thao cần hoạt động nhiều',
+    //   photoUrl: 'https://cdn.tgdd.vn/Products/Images/9980/260516/nike-air-max-zm950-cv6897-nam-thumb-1-2-600x600.jpg',
+    //   inStock: 100,
+    //   quantity: 1,
+    // },
   ];
 
 

@@ -12,13 +12,13 @@
                 <p class="discription">{{item.description}}</p>
                 <p class="price">Giá: <span>{{item.price | number}} VNĐ</span></p>
                 <div class="quantity-total">
-                    <button (click)="this.cartService.decre(item)">giảm</button>
+                    <button (click)="this.cartService.decre(item)">Giảm</button>
                     <p class="quantity">Số lượng: <span>{{item.quantity}}</span></p>
                     <div *ngIf="item.inStock <= 0">
                         <button disabled="true" (click)="this.cartService.incre(item)">tăng</button>
                     </div>
                     <div *ngIf="item.inStock > 0">
-                        <button (click)="this.cartService.incre(item)">tăng</button>
+                        <button (click)="this.cartService.incre(item)">Tăng</button>
                     </div>
                     
                     <p class="total">Tổng: <span>{{item.price*item.quantity | number}} VNĐ</span></p>

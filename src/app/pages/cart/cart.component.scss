@@ -104,3 +104,20 @@ img{
 .remove button:hover{
     color: #e7861e;
 }
+
+.purchase button{
+    padding: 10px 20px;
+    background-color: #e7861e;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.purchase{
+    margin-top: 1rem;
+}
+
+.purchase button:hover{
+    background-color: #dc7200;
+}
