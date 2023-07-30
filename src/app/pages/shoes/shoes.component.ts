@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Timestamp } from '@angular/fire/firestore';
 import { CartService } from 'src/app/services/cart.service';
 
 @Component({
@@ -8,10 +9,17 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class ShoesComponent implements OnInit {
 
-  constructor(public cartService: CartService) { }
+  constructor(public cartService: CartService) {
+    let test = Timestamp.now().toDate().getTime().toString();
+    console.log(test)
 
+  }
 
-  ngOnInit(): void {
+  
+
+  ngOnInit(){
+    let test2 = Timestamp.now().toDate().getTime().toString();
+    console.log(test2)
   }
 
 }

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "fir-web-ban-hang": {
+      "hosting": {
+        "web_ban_hang": [
+          "fir-web-ban-hang"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "fir-web-ban-hang"
+  }
+}

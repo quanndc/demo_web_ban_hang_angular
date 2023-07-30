@@ -1,29 +1,28 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { Item } from '../models/item.model';
-
+import {doc, setDoc, Timestamp, getFirestore} from "firebase/firestore";
+// import {  } from '@angular/fire/firestore';
+// import {}
 @Injectable({
   providedIn: 'root'
 })
-export class CartService {
-  constructor() { }
+export class CartService{
+
+  
+
+  // db = getFirestore();
+  // shoes2 = doc(this.db, "shoes");
 
   total = 0;
-  cart:Item[] = [
-    // {
-    //   id:1,
-    //   name: 'Nike Air Max Zm950 CV6897',
-    //   type: "shoes",
-    //   price: 5280000,
-    //   description: 'Giày Nike sở hữu công nghệ Air Max độc quyền có phần đệm khí giúp êm chân, phù hợp với những môn thể thao cần hoạt động nhiều',
-    //   photoUrl: 'https://cdn.tgdd.vn/Products/Images/9980/260516/nike-air-max-zm950-cv6897-nam-thumb-1-2-600x600.jpg',
-    //   inStock: 100,
-    //   quantity: 1,
-    // },
-  ];
+  cart:Item[] = [];
 
 
 
   addToCart(item:Item){
+    if(item.inStock === 0){
+      alert("Out of stock");
+      return;
+    }
     let index = this.cart.findIndex((e) => e.id === item.id);
     if(index === -1){
       item.quantity = 1;
@@ -37,17 +36,6 @@ export class CartService {
       console.log(this.cart);
       return;
     }  
-  }
-
-  removeFromCart(id:number){
-    let index = this.cart.findIndex((e) => e.id === id);
-    if(index !== -1){
-      this.cart[index].quantity--;
-      this.cart[index].inStock++;
-      if(this.cart[index].quantity === 1){
-        this.cart.splice(index, 1);
-      }
-    }
   }
 
   decre(item: Item){
@@ -84,6 +72,7 @@ export class CartService {
       subtotal += (prdt.price*prdt.quantity)
     }
     this.total = subtotal; 
+    this.cart = [];
   }
 
   shoes:Item[] = [

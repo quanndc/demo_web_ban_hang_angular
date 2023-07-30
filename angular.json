@@ -100,6 +100,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "web_ban_hang:build:production",
+            "firebaseProject": "fir-web-ban-hang",
+            "firebaseHostingSite": "fir-web-ban-hang"
+          }
         }
       }
     }
